@@ -7,4 +7,6 @@ app.get('/:id', function(req,res){
 	res.send("Hello " + id);
 });
 
+console.log("hello");
+
 app.listen(3000);
