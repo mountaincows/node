@@ -8,3 +8,5 @@ app.get('', function(req,res){
 	res.send("HELLO");
 	
 });
+
+app.listen(1337);
