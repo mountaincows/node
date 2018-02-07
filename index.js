@@ -1,12 +1,8 @@
-var express = require('express');
-var mysql = require('mysql');
-var app = express();
 var http = require('http');
 
-app.get('', function(req,res){
-	
-	res.send("HELLO");
-	
-});
+var port = process.env.port || 1337;
 
-app.listen(1337);
+http.createServer(function(req,res){
+	res.wirteHead(200, {'content-Type': 'text/plain'});
+	res.end("Hello");
+}).listen(port);
