@@ -1,16 +1,10 @@
 var express = require('express');
 var mysql = require('mysql');
 var app = express();
+var http = require('http');
 
-console.log("hello");
-
-app.get('/:id', function(req,res){
-	
-	var id = req.params.id;
-	
-	res.send("Hello " + id);
-});
-
-console.log("hello");
-
-app.listen(2111);
+http.createServer(function (req,res){
+	 res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.write('Hello World!');
+  res.end();
+}).listen(8080);
